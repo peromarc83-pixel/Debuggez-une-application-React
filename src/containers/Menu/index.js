@@ -19,8 +19,8 @@ const Menu = () => (
       </li>
     </ul>
     <Button title="contact" onClick={() => (window.document.location.hash = "#contact")}>
-      Contact
-    </Button>
+  Contact
+</Button>
   </nav>
 );
 

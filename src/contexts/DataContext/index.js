@@ -31,12 +31,17 @@ export const DataProvider = ({ children }) => {
     getData();
   });
   
+  const last = data?.events
+    ?.slice()
+    .sort((evtA, evtB) => new Date(evtB.date) - new Date(evtA.date))[0];
+
   return (
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         data,
         error,
+        last,
       }}
     >
       {children}

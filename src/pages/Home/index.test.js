@@ -29,16 +29,27 @@ describe("When Form is created", () => {
 
 
 describe("When a page is created", () => {
-  it("a list of events is displayed", () => {
-    // to implement
+  it("a list of events is displayed", () => {      
+    render(<Home />);  
+   screen.getByRole("heading", { name: "Nos réalisations" });
   })
+
   it("a list a people is displayed", () => {
-    // to implement
+    render(<Home />);   
+    screen.getByText("Samira");
+    screen.getByText("Jean-baptiste");
+    screen.getByText("Alice");
   })
+
   it("a footer is displayed", () => {
-    // to implement
+    render(<Home />);   
+    screen.getByText("Contactez-nous");
+    screen.getByText("45 avenue de la République, 75000 Paris");
   })
+
+
   it("an event card, with the last event, is displayed", () => {
-    // to implement
+    render(<Home />);   
+    screen.getByText("Notre derniére prestation");
   })
 });
